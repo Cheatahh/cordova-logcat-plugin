@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-logcat-plugin" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>Cordova Logcat Plugin</name>
+    <description>Log to the android logcat stream.</description>
+
+    <engines>
+        <engine name="cordova" version=">=12.0.0"/>
+    </engines>
+
+    <platform name="android" kotlin="1.9.24">
+
+        <framework
+            src="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24"
+            type="gradle" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LogcatIntegration">
+                <param name="android-package" value="cheatahh.cordova.LogcatIntegration"/>
+            </feature>
+            <preference name="GradlePluginKotlinEnabled" value="true" />
+            <preference name="GradlePluginKotlinVersion" value="1.9.24" />
+            <preference name="GradlePluginKotlinCodeStyle" value="official" />
+        </config-file>
+
+        <source-file src="src/android/LogcatIntegration.kt" target-dir="app/src/main/kotlin/cheatahh/cordova"/>
+
+    </platform>
+
+    <js-module src="www/LogcatIntegration.js" name="LogcatIntegration">
+        <clobbers target="LogcatIntegration"/>
+    </js-module>
+
+</plugin>

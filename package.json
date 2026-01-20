@@ -1,0 +1,11 @@
+{
+    "name": "cordova-logcat-plugin",
+    "version": "1.0.0",
+    "description": "Log to the android logcat stream.",
+    "cordova": {
+        "id": "cordova-logcat-plugin",
+        "platforms": ["android"]
+    },
+    "keywords": [],
+    "author": "Cheatahh"
+}
