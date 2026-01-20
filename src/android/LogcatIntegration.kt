@@ -1,8 +1,9 @@
 package cheatahh.cordova
 
+import android.util.Log
 import org.apache.cordova.CallbackContext
 import org.apache.cordova.CordovaPlugin
-import android.util.Log
+import org.json.JSONArray
 
 class LogcatIntegration : CordovaPlugin() {
     override fun execute(action: String, args: JSONArray, callback: CallbackContext) = when(action) {
